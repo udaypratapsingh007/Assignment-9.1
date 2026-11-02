@@ -1,0 +1,204 @@
+/* ===== Mobile styles (default, written first) ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333333;
+  background-color: #f4f6fb;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* One column layout: header, sidebar, main stacked */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "main";
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 15px;
+  color: #ffffff;
+  background-color: #1a3c6e;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.dashboard-header p {
+  margin: 0;
+}
+
+/* Sidebar is a wrapping row of links on mobile */
+.dashboard-sidebar {
+  grid-area: sidebar;
+  background-color: #12294d;
+}
+
+.dashboard-sidebar nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard-sidebar a {
+  padding: 12px 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.dashboard-sidebar a:hover {
+  background-color: #2f5aa0;
+}
+
+.dashboard-main {
+  grid-area: main;
+  min-width: 0;
+  padding: 15px;
+}
+
+.dashboard-main h2 {
+  margin-top: 0;
+  color: #1a3c6e;
+}
+
+/* Cards: 1 column on mobile */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+
+.stat-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  background-color: #dbe7f7;
+  border-radius: 50%;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  color: #555555;
+}
+
+.stat-number {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a3c6e;
+}
+
+/* Activity table: scrolls inside its own box so the page never overflows sideways */
+.activity {
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+
+.activity h2 {
+  margin-top: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+}
+
+th {
+  color: #ffffff;
+  background-color: #1a3c6e;
+}
+
+/* ===== Tablet: breakpoint 1 (600px and up) ===== */
+@media (min-width: 600px) {
+  .dashboard-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+  }
+
+  .dashboard-main {
+    padding: 25px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== Desktop: breakpoint 2 (900px and up) ===== */
+@media (min-width: 900px) {
+  .dashboard {
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas:
+      "header  header"
+      "sidebar main";
+  }
+
+  .dashboard-sidebar {
+    padding: 20px 0;
+  }
+
+  .dashboard-sidebar nav {
+    flex-direction: column;
+  }
+
+  .dashboard-sidebar a {
+    padding: 12px 25px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

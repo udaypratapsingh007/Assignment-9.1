@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-First Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Header -->
+      <header class="dashboard-header">
+        <h1>My Dashboard</h1>
+        <p>Welcome back, Uday</p>
+      </header>
+
+      <!-- Sidebar -->
+      <aside class="dashboard-sidebar">
+        <nav>
+          <a href="#overview">Overview</a>
+          <a href="#students">Students</a>
+          <a href="#courses">Courses</a>
+          <a href="#reports">Reports</a>
+          <a href="#settings">Settings</a>
+        </nav>
+      </aside>
+
+      <!-- Main content -->
+      <main class="dashboard-main">
+        <h2>Overview</h2>
+
+        <!-- Statistic cards -->
+        <div class="stats">
+          <div class="stat-card">
+            <span class="stat-icon">👥</span>
+            <div class="stat-info">
+              <h3>Total Students</h3>
+              <p class="stat-number">1,250</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-icon">📚</span>
+            <div class="stat-info">
+              <h3>Active Courses</h3>
+              <p class="stat-number">24</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-icon">✅</span>
+            <div class="stat-info">
+              <h3>Assignments Done</h3>
+              <p class="stat-number">890</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-icon">⭐</span>
+            <div class="stat-info">
+              <h3>Average Score</h3>
+              <p class="stat-number">82%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent activity table -->
+        <section class="activity">
+          <h2>Recent Activity</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Activity</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Aman</td>
+                  <td>Submitted Assignment 8.1</td>
+                  <td>26 Oct 2026</td>
+                </tr>
+                <tr>
+                  <td>Riya</td>
+                  <td>Joined the Web Development course</td>
+                  <td>25 Oct 2026</td>
+                </tr>
+                <tr>
+                  <td>Karan</td>
+                  <td>Completed the CSS quiz</td>
+                  <td>25 Oct 2026</td>
+                </tr>
+                <tr>
+                  <td>Sneha</td>
+                  <td>Submitted Assignment 7.5</td>
+                  <td>24 Oct 2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
